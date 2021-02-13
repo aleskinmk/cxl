@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700&display=swap');
+
+.bg-main {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.065) 0%, rgba(0, 0, 0, 0.07) 100%), url(images/bg-2.jpg) no-repeat center center scroll;
+  height: 100vh;
+  background-size: cover;
+}
+.bg-icons {
+  background: url(images/icons-2.svg) no-repeat center center scroll;
+  background-size: cover;
+}
+.bg-icons-2 {
+  background: url(images/icons-3.svg) no-repeat center bottom scroll;
+  background-size: 100%;
+}
+.bg-2 {
+  background: linear-gradient(243.8deg, rgba(248,1,92, 0.8) 0%, rgba(255,159,20, 0.8) 100%), url(images/bg-3.jpg) no-repeat center center scroll;
+  background-size: cover;
+}
+.bg-3 {
+  background: linear-gradient(243.8deg, rgba(0,0,0, 0.76) 0%, rgba(0,0,0, 0.92) 100%), url(images/bg-3.jpg) no-repeat center center scroll;
+  background-size: cover;
+}
+.bg-4 {
+  background: linear-gradient(243.8deg, rgba(248,1,92, 0.9) 0%, rgba(255,159,20, 0.9) 100%);
+  background-size: cover;
+}
+.gradient-container {
+  background: linear-gradient(233.8deg, #F8015C 14.89%, #FF9F14 80.2%), #C4C4C4;
+  border-radius: 0px 0px 36px 36px;
+}
+.bg-quote {
+  background: url(images/quote.png) no-repeat center center scroll;
+  background-size: 400px;
+}
+.header-one {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 84px;
+  line-height: 110%;
+  /* or 92px */
+
+  letter-spacing: -0.05em;
+}
+.header-two {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 68px;
+  line-height: 104%;
+  /* or 71px */
+  letter-spacing: -0.05em;
+}
+.header-three{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 104%;
+  /* or 50px */
+
+  text-align: center;
+  letter-spacing: -0.05em;
+}
+.text-gradient {
+  background: -webkit-linear-gradient(263.19deg, #F8015C 24.05%, #FF9F14 75.92%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.text-orange {
+  color: #FF9F14;
+}
+.text-red {
+  color: #F8015C;
+}
+.bg-form {
+  border: 2px solid #EEF0F7;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 46px rgba(0, 0, 0, 0.02);
+  border-radius: 36px;
+}
+input{
+  height: 50px;
+  border: 2px solid #CED1DB;
+  box-sizing: border-box;
+  border-radius: 6px;
+  text-indent: 10px;
+}
+input[type=submit]{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 162%;
+  /* or 32px */
+
+
+  color: #FFFFFF;
+  border: 0px;
+  height: 50px;
+  background: #F8015C;
+  border-radius: 50px;
+}
+textarea {
+  border: 2px solid #CED1DB;
+  box-sizing: border-box;
+  border-radius: 6px;
+  text-indent: 10px;
+}
+.text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+}
+.text-2 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 25px;
+
+  color: #626879;
+}
+.text-3 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.text-4 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+@media (max-width:800px) {
+  .header-one {
+    font-size: 52px;
+  }
+  .header-two {
+    font-size: 48px;
+  }
+}
