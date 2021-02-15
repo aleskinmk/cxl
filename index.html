@@ -12,10 +12,20 @@
   </head>
   <body>
 
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li class="nav-link"><a href="#who">Who we are</a></li>
+            <li class="nav-link"><a href="#what">What we do</a></li>
+            <li class="nav-link"><a href="#consumer-experience">Consumer Experience</a></li>
+            <li class="nav-link"><a href="#consumer-acquisition">Customer Acquisition</a></li>
+            <li class="nav-link"><a href="#form">Contact Us</a></li>
+        </ul>
+    </nav>
+
     <div class="bg-main d-flex justify-content-center flex-wrap">
       <div class="d-flex align-self-start justify-content-between w-100 p-4">
         <img src="images/logo-white.svg" alt="logo">
-        <img src="images/menu.svg" alt="menu">
+        <img class='burger' src="images/menu.svg" alt="menu">
       </div>
 
       <div class="pb-5 px-3 mb-5" style="max-width:500px">
@@ -25,8 +35,23 @@
 
     </div>
 
+
+    <script type="text/javascript">
+      const burger = document.querySelector('.burger');
+      const navbar = document.querySelector('.navbar');
+      const navLink = document.querySelectorAll('.nav-link');
+
+      burger.addEventListener('click', () => {
+        navbar.classList.toggle('nav-open');
+        burger.classList.toggle('burger-open');
+        navLink.forEach(link => {
+            link.classList.toggle('nav-link-open');
+        })
+      });
+    </script>
+
     <!-- Who Are We -->
-    <div class="container-fluid py-5 bg-icons">
+    <div id="who" class="container-fluid py-5 bg-icons">
       <div class="container py-5 ">
         <div class="row align-items-center justify-content-center py-5">
           <div class="col-md-4 col-lg-3 mb-3 mb-md-0">
@@ -54,7 +79,7 @@
     </div>
 
 
-    <div class="container py-2 py-md-5">
+    <div id="what" class="container py-2 py-md-5">
       <div class="row align-items-center justify-content-center py-5 my-5">
         <div class="col-lg-6 mb-4 mb-lg-0">
           <img class="img-fluid" src="images/image-1.jpg" alt="">
@@ -69,7 +94,7 @@
     </div>
 
     <div class="container-fluid py-5 bg-3">
-      <div class="row align-items-center justify-content-center py-5">
+      <div class="row align-items-center justify-content-center pt-5 pb-3">
         <div class="col-md-6 col-lg-4 text-center px-3">
 
           <!-- <div class="d-flex align-items-center">
@@ -94,9 +119,8 @@
           <img class="mb-3" src="images/airbnb.png" width="52" alt="airbnb">
           <p class="text-2 mb-5 text-white">Airbnb isn’t killing the hotel industry. Limited availability and pricing options are.</p>
 
-
-
-          </p>
+          <p class="text-2 pt-5 mb-0 text-white"><b><span class="text-orange">Technology</span></b> by itself is not the disruptor.
+Not being <b><span class="text-orange">customer-centric</span></b> is the biggest threat to any business</p>
         </div>
       </div>
     </div>
@@ -127,7 +151,7 @@
       </div>
     </div>
 
-    <div class="container py-2 py-md-5">
+    <div id="consumer-experience" class="container py-2 py-md-5">
       <div class="row align-items-center justify-content-center py-5 my-5">
         <div class="col-lg-6 ">
           <h2 class="header-one mb-4">Consumer <span class="text-orange">Experience</span></h2>
@@ -140,11 +164,24 @@
       </div>
     </div>
 
-    <div class="container-fluid py-2 bg-4">
+    <div class="container-fluid pt-2 pb-5 bg-4">
       <div class="row align-items-center justify-content-center pt-5">
-        <div class="col-12 text-center">
+
+        <div class="col-12 text-center d-none d-md-block">
           <img class="img-fluid" src="images/info.png" alt="info">
         </div>
+
+        <div class="col-12 text-center text-white d-block d-md-none">
+          <img class="mb-4" src="images/logo-white.svg" alt="">
+          <p>The Producer Experience</p>
+          <p>The Community Experience</p>
+          <p>Service & Customer Care</p>
+          <p>The Consumer Search Journey</p>
+          <p>The Digital Experience</p>
+          <p>The Non-Digital Experience</p>
+          <p>The Shopper Experience</p>
+        </div>
+
       </div>
     </div>
 
@@ -159,6 +196,9 @@
             <p class="text-2 text-white">MAP OUT YOUR CONSUMER’S JOURNEY</p>
           </div>
         </div>
+        <div class="col-lg-1">
+
+        </div>
 
         <div class="col-md-6 col-lg-5 text-center">
           <img class="img-fluid w-100" src="images/image-5.png" alt="info">
@@ -171,18 +211,35 @@
       </div>
     </div>
 
-    <div class="container-fluid py-5 bg-4">
+    <div class="container-fluid py-4 py-md-5 bg-4">
       <div class="container">
         <div class="row align-items-center justify-content-center py-5">
-          <div class="col-lg-6">
+
+          <div class="col-lg-4 mb-3">
             <h2 class="header-two text-white mb-4">Rapid Testing</h2>
             <p class="text-2 text-white mb-4">START TESTING CONCEPTS TO MAXIMIZE SUCCESS AND ROI
             </p>
-
           </div>
-          <div class="col-lg-6 text-center">
+
+          <div class="col-lg-7 text-center d-none d-md-block">
             <img class="img-fluid" src="images/info-2.png" alt="info">
           </div>
+
+          <div class="col-12 d-block d-md-none text-white mb-4">
+            <h4 class="header-four">BUILD</h4>
+            <p>mockups, wireframes, simulation etc. that serve as a proxy to communicate concepts</p>
+          </div>
+
+          <div class="col-12 d-block d-md-none text-white mb-4">
+            <h4 class="header-four">TEST</h4>
+            <p>small scale experiments that can be quickly deployed to test a variety of designs and validate key assumptions</p>
+          </div>
+
+          <div class="col-12 d-block d-md-none text-white">
+            <h4 class="header-four">LEARN</h4>
+            <p>from experiments and adapt concept design</p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -192,7 +249,21 @@
         <div class="col-lg-12">
           <h2 class="header-one mb-4">Agile <br><span class="text-red">Deployment</span></h2>
           <p class="text-2">ACCELERATE PERFORMANCE WITH AGILE DEPLOYMENT METHODOLOGY</p>
-          <img class="img-fluid" src="images/info-3.png" alt="Meeting">
+
+          <img class="d-none d-md-block img-fluid" src="images/info-3.png" alt="Meeting">
+
+        </div>
+        <div class="col-6 d-block d-md-none">
+          <img class="img-fluid" src="images/step-1.svg" alt="info">
+        </div>
+        <div class="col-6 d-block d-md-none">
+          <img class="img-fluid" src="images/step-2.svg" alt="info">
+        </div>
+        <div class="col-6 d-block d-md-none">
+          <img class="img-fluid" src="images/step-3.svg" alt="info">
+        </div>
+        <div class="col-6 d-block d-md-none">
+          <img class="img-fluid" src="images/step-4.svg" alt="info">
         </div>
       </div>
     </div>
@@ -201,25 +272,28 @@
     <div class="container-fluid py-5 bg-4">
       <div class="container">
         <div class="row align-items-center justify-content-center py-5">
-          <div class="col-lg-6">
+          <div class="col-lg-5">
             <h2 class="header-two text-white mb-4">Design Blueprint</h2>
             <p class="text-2 text-white mb-4">CREATE A ROBUST PRODUCT, PROGRAM, OR SERVICE BLUEPRINT FOR YOUR CUSTOMERS
             </p>
 
           </div>
-          <div class="col-lg-6 text-center">
+
+          <div class="col-lg-7 text-center">
             <img class="img-fluid" src="images/info-4.png" alt="info">
           </div>
+
         </div>
       </div>
     </div>
 
-    <div class="container pt-2 pts-md-5">
+    <div id="consumer-acquisition" class="container pt-2 pts-md-5">
       <div class="row align-items-center justify-content-center py-5 my-5">
         <div class="col-lg-6 ">
           <h2 class="header-one mb-4">Customer <span class="text-orange">Acquisition</span></h2>
           <p class="text-2">START DESIGNING IMPACTFUL ACQUISTION PROGRAMS</p>
         </div>
+
         <div class="col-lg-6 mb-4 mb-lg-0">
           <img class="img-fluid" src="images/image-6.png" alt="Meeting">
         </div>
@@ -263,32 +337,33 @@
     </div>
 
     <div class="container-fluid">
-      <div class="row align-items-center justify-content-center py-5"  style="min-height:600px">
-        <div class="col-lg-6 d-flex align-items-center justify-content-center text-center px-5 py-5 bg-3 h-100" style="max-width:800px">
-          <div class="" style="max-width:400px">
+      <div class="row align-items-center justify-content-center py-5"  style="min-height:700px">
+
+        <div class="col-lg-6 d-flex align-items-center justify-content-center text-center px-5 py-5 bg-3" style="max-width:800px">
+          <div class="" style="height: 340px; max-width:400px">
             <h3 class="header-three text-white mb-4">Organization <br>Experience</h3>
             <p class="text-2 text-white">Implement agile ways of working to serve your customers
-  <br>Implement Governance, prioritization, & tracking of consumer initiatives
-  <br>Setting up a gate process and the right governance board
-  <br>Set up your Project Management Office</p>
+              <br>Implement Governance, prioritization, & tracking of consumer initiatives
+              <br>Setting up a gate process and the right governance board
+            <br>Set up your Project Management Office</p>
           </div>
-
-
         </div>
-        <div class="col-lg-6 d-flex align-items-center justify-content-center text-center px-5 py-5 bg-3 h-100" style="max-width:800px">
-          <div class="" style="max-width:400px">
+
+        <div class="col-lg-6 d-flex align-items-center justify-content-center text-center px-5 py-5 bg-3" style="max-width:800px">
+          <div class="" style="height: 340px; max-width:400px">
           <h3 class="header-three text-white mb-4">Leadership <br>Experience</h3>
           <p class="text-2 text-white">Leadership of your managers through well designed programs & right measurement
-<br>Make sure that your managers & leaders are accountable for consumer centricity
-<br>Measure the effectiveness of managers & project leaders, and their key behaviors
-</p>
+            <br>Make sure that your managers & leaders are accountable for consumer centricity
+            <br>Measure the effectiveness of managers & project leaders, and their key behaviors
+          </p>
           </div>
         </div>
+
       </div>
     </div>
 
 
-    <div class="container-fluid pt-2 pb-5 bg-icons-2">
+    <div id="form" class="container-fluid pt-2 pb-5 bg-icons-2">
       <div class="container pb-5">
       <div class="row align-items-center justify-content-center">
         <div class="col-lg-6 ">
@@ -298,9 +373,10 @@
         <div class="col-lg-5 mb-4 mb-lg-0 py-5 px-4 bg-form">
           <form class="" action="index.html" method="post">
             <input class="w-100 mb-3" type="text" name="" value="" placeholder="Your Name">
+            <input class="w-100 mb-3" type="text" name="" value="" placeholder="Your Company">
             <input class="w-100 mb-3" type="email" name="" value="" placeholder="Your Email">
             <textarea class="w-100" name="name" rows="8" cols="80" placeholder="Your Email"></textarea>
-            <input class="w-100" type="submit" name="" value="Send">
+            <input class="mt-3 w-100" type="submit" name="" value="Send">
           </form>
         </div>
       </div>
